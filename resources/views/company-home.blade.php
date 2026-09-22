@@ -3,140 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Profil Perusahaan</title>
+
+    <title>Profil Perusahaan - Rekayasa Web</title>
 
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #333;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
         }
 
         .navbar {
-            background: #1565c0;
-            padding: 18px 8%;
+            background: #0f3d91;
             color: white;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .navbar h2 {
-            margin: 0;
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
         }
 
         .navbar a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 25px;
+            font-size: 14px;
         }
 
         .hero {
+            background: linear-gradient(
+                135deg,
+                #0f3d91,
+                #2563eb
+            );
+
+            color: white;
             text-align: center;
-            padding: 70px 20px;
-            background: white;
+            padding: 80px 20px;
         }
 
         .hero h1 {
-            color: #1565c0;
-            font-size: 36px;
-            margin-bottom: 15px;
+            font-size: 42px;
+            margin-bottom: 18px;
         }
 
         .hero p {
-            font-size: 18px;
-            color: #666;
+            font-size: 17px;
+            color: #dbeafe;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
         }
 
-        .content {
+        .section {
             width: 85%;
-            max-width: 900px;
-            margin: 40px auto;
-            display: flex;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            color: #0f3d91;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
         }
 
         .card {
             background: white;
-            width: 250px;
-            padding: 25px;
-            border-radius: 12px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border: 1px solid #eef0f4;
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #e8f0ff;
+            color: #0f3d91;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
         }
 
         .card h3 {
-            color: #1565c0;
+            color: #111827;
+            margin-bottom: 12px;
         }
 
-        .footer {
+        .card p {
+            color: #6b7280;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .about {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
             text-align: center;
-            background: #1565c0;
+        }
+
+        .about p {
+            color: #6b7280;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .cta {
+            margin-top: 45px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0f3d91;
             color: white;
-            padding: 20px;
-            margin-top: 50px;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #0b2f70;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #0f3d91;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                padding: 18px 5%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="navbar">
-        <h2>Profil Perusahaan</h2>
+    <nav class="navbar">
+
+        <div class="logo">
+            Rekayasa Web
+        </div>
 
         <div>
             <a href="/">Beranda</a>
             <a href="/login">Login</a>
         </div>
-    </div>
+
+    </nav>
 
     <section class="hero">
-        <h1>Selamat Datang</h1>
+
+        <h1>Profil Perusahaan</h1>
 
         <p>
-            Website Profil Perusahaan
+            Membangun layanan yang profesional, terpercaya,
+            dan berorientasi pada kebutuhan pelanggan.
         </p>
 
-        <p>
-            Halaman ini dibuat sebagai bagian dari
-            <strong>Tugas Rekayasa Web</strong>.
-        </p>
     </section>
 
-    <div class="content">
+    <section class="section">
 
-        <div class="card">
-            <h3>Tentang Kami</h3>
+        <div class="section-title">
+
+            <h2>Tentang Perusahaan</h2>
+
             <p>
-                Perusahaan yang berkomitmen memberikan
-                pelayanan dan produk berkualitas.
+                Mengenal lebih dekat profil perusahaan kami
             </p>
+
         </div>
 
-        <div class="card">
-            <h3>Visi</h3>
+        <div class="about">
+
             <p>
-                Menjadi perusahaan yang terpercaya,
-                profesional, dan terus berkembang.
+                Perusahaan kami berkomitmen untuk memberikan
+                produk dan pelayanan yang berkualitas dengan
+                mengutamakan profesionalisme, inovasi, dan
+                kepuasan pelanggan.
             </p>
+
         </div>
 
-        <div class="card">
-            <h3>Misi</h3>
+    </section>
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Visi & Misi</h2>
+
             <p>
-                Memberikan pelayanan terbaik serta
-                menciptakan nilai bagi pelanggan.
+                Prinsip yang menjadi dasar dalam menjalankan perusahaan
             </p>
+
         </div>
 
-    </div>
+        <div class="cards">
 
-    <div class="footer">
-        &copy; 2026 Tugas Rekayasa Web
-    </div>
+            <div class="card">
+
+                <div class="icon">
+                    V
+                </div>
+
+                <h3>Visi</h3>
+
+                <p>
+                    Menjadi perusahaan yang terpercaya,
+                    profesional, inovatif, dan mampu
+                    memberikan nilai terbaik bagi pelanggan.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="icon">
+                    M
+                </div>
+
+                <h3>Misi</h3>
+
+                <p>
+                    Memberikan pelayanan terbaik,
+                    meningkatkan kualitas produk,
+                    serta mengembangkan inovasi secara berkelanjutan.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="icon">
+                    ✓
+                </div>
+
+                <h3>Komitmen</h3>
+
+                <p>
+                    Menjaga kualitas, profesionalisme,
+                    dan kepuasan pelanggan dalam setiap
+                    proses pelayanan.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="cta">
+
+            <a href="/" class="button">
+                Kembali ke Beranda
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Rekayasa Web • Universitas Pamulang
+    </footer>
 
 </body>
 </html>
